@@ -146,18 +146,18 @@ body {
 }
 
 .video-wrapper {
-  position: relative;
   width: 100%;
-  padding-bottom: 150%;
-  height: 0;
+  aspect-ratio: 9 / 16;   /* لأن الفيديو عمودي */
+  max-width: 380px;       /* يخليها ما تكبر أكثر من اللازم */
+  margin: 0 auto;         /* يخليها بالوسط */
 }
 
 .video-wrapper video {
-  position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 18px;
+}
 }
 
 /* Sound Button */
@@ -281,3 +281,4 @@ body {
   }
 
 }
+
