@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Elmeyali | Portfolio</title>
+
+<link rel="stylesheet" href="style.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo">
+    <img src="elmeyali png.png" alt="Elmeyali Logo">
+  </a>
+
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#instagram-posts">Posts</a>
+    <a href="#contact">Contact</a>
+
+    <!-- Instagram Icon -->
+    <a href="https://instagram.com/elmeyali" target="_blank" class="instagram-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5C18.55 4 20 5.45 20 7.75v8.5c0 2.3-1.45 3.75-3.75 3.75h-8.5C5.45 20 4 18.55 4 16.25v-8.5C4 5.45 5.45 4 7.75 4zm8.25 1.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+      </svg>
+    </a>
+
+    <a href="cv.jpg" class="cv-btn">Download CV</a>
+  </nav>
+</header>
+
+<main class="hero">
+  <div class="hero-image">
+    <img src="ME.png" alt="Yousef Elmeyali">
+  </div>
+  <div class="hero-text">
+    <h1>Hi –<br>I'm <span>Mayali</span></h1>
+    <p>Marketing Manager, Art Director</p>
+    <a href="#projects" class="btn">View My Work →</a>
+  </div>
+</main>
+
+<section id="about" class="section">
+  <h2>About Me</h2>
+  <p>
+    I’m Josef known as Mayali — a creative art director passionate about visuals and storytelling. 
+    I started with art direction in 2019 and worked with multiple restaurants and businesses in Iraq.
+  </p>
+</section>
+
+<section id="projects" class="section">
+  <h2>Featured Projects</h2>
+  <div class="grid reels-grid">
+
+    <!-- Video 1 -->
+    <article class="card">
+      <div class="video-wrapper">
+        <video id="video1" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dnshf22re/video/upload/v1772197250/0130_cq45rg.mp4" type="video/mp4">
+        </video>
+        <button class="sound-btn" onclick="toggleSound('video1')">🔊</button>
+      </div>
+    </article>
+
+    <!-- Video 2 -->
+    <article class="card">
+      <div class="video-wrapper">
+        <video id="video2" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dnshf22re/video/upload/v1772197253/IMG_3556_qelomt.mov" type="video/mp4">
+        </video>
+        <button class="sound-btn" onclick="toggleSound('video2')">🔊</button>
+      </div>
+    </article>
+
+    <!-- Video 3 -->
+    <article class="card">
+      <div class="video-wrapper">
+        <video id="video3" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dnshf22re/video/upload/v1772197399/0131_1_yf0aif.mp4" type="video/mp4">
+        </video>
+        <button class="sound-btn" onclick="toggleSound('video3')">🔊</button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="instagram-posts" class="section">
+  <h2>Post Designs</h2>
+  <div class="grid posts-grid">
+    <img src="instagram post 1.jpg" class="post-large" alt="">
+    <img src="instagram post 2.jpg" alt="">
+    <img src="instagram post 3.jpg" alt="">
+    <img src="instagram post 4.jpg" alt="">
+    <img src="instagram post 5.jpg" alt="">
+    <img src="instagram post 6.jpg" alt="">
+    <img src="instagram post 7.jpg" alt="">
+    <img src="instagram post 8.jpg" alt="">
+    <img src="instagram post 9.jpg" alt="">
+    <img src="instagram post 10.jpg" alt="">
+    <img src="instagram post 11.jpg" alt="">
+    <img src="instagram post 13.png" alt="">
+    <img src="instagram post 14.png" alt="">
+    <img src="instagram post 15.png" alt="">
+  </div>
+</section>
+
+<footer id="contact" class="footer">
+  <p>© 2025 Elmeyali |
+    <a href="mailto:yusahm0673@gmail.com">yusahm0673@gmail.com</a>
+    +47 401 59154
+  </p>
+</footer>
+
+<script>
+function toggleSound(videoId) {
+  const video = document.getElementById(videoId);
+  video.muted = !video.muted;
+}
+</script>
+
+</body>
+</html>
