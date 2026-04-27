@@ -58,36 +58,100 @@
   <h2>Frames</h2>
   <div class="grid reels-grid">
 
+<section id="projects" class="section">
+  <h2>Frames</h2>
+  <div class="grid reels-grid">
+
     <!-- Video 1 -->
     <article class="card">
       <div class="video-wrapper">
-        <video id="video1" autoplay muted loop playsinline>
+        <video class="hover-video" autoplay muted loop playsinline>
           <source src="https://pub-78619788e1dd46e5ba19b30abbf9047c.r2.dev/IMG_3556.MOV" type="video/mp4">
         </video>
-       
+
+        <button class="unmute-btn">🔊</button>
       </div>
     </article>
 
     <!-- Video 2 -->
     <article class="card">
       <div class="video-wrapper">
-        <video id="video2" autoplay muted loop playsinline>
+        <video class="hover-video" autoplay muted loop playsinline>
           <source src="https://pub-78619788e1dd46e5ba19b30abbf9047c.r2.dev/0131(1).mp4" type="video/mp4">
         </video>
 
+        <button class="unmute-btn">🔊</button>
       </div>
     </article>
 
     <!-- Video 3 -->
     <article class="card">
       <div class="video-wrapper">
-        <video id="video3" autoplay muted loop playsinline>
+        <video class="hover-video" autoplay muted loop playsinline>
           <source src="https://pub-78619788e1dd46e5ba19b30abbf9047c.r2.dev/01301.mp4" type="video/mp4">
         </video>
 
+        <button class="unmute-btn">🔊</button>
       </div>
     </article>
 
+  </div>
+</section>
+
+<style>
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Center button */
+.unmute-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.55);
+  color: white;
+  border: none;
+  padding: 18px 22px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+
+/* Show on hover */
+.video-wrapper:hover .unmute-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  pointer-events: auto;
+}
+</style>
+
+<script>
+document.querySelectorAll(".video-wrapper").forEach(wrapper => {
+  const video = wrapper.querySelector("video");
+  const btn = wrapper.querySelector(".unmute-btn");
+
+  btn.addEventListener("click", () => {
+    video.muted = !video.muted;
+
+    if(video.muted){
+      btn.innerHTML = "🔊";
+    } else {
+      btn.innerHTML = "🔇";
+    }
+  });
+});
+</script>
   </div>
 </section>
 
