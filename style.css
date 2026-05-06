@@ -281,4 +281,47 @@ body {
   }
 
 }
+.frames-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px;
+}
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.hover-video {
+  width: 100%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.unmute-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
